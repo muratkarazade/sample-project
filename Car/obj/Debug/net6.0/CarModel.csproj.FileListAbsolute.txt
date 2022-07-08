@@ -1,0 +1,12 @@
+C:\Users\Murat\source\repos\CarProject\Car\bin\Debug\net6.0\CarModel.deps.json
+C:\Users\Murat\source\repos\CarProject\Car\bin\Debug\net6.0\CarModel.dll
+C:\Users\Murat\source\repos\CarProject\Car\bin\Debug\net6.0\CarModel.pdb
+C:\Users\Murat\source\repos\CarProject\Car\obj\Debug\net6.0\CarModel.csproj.AssemblyReference.cache
+C:\Users\Murat\source\repos\CarProject\Car\obj\Debug\net6.0\CarModel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Murat\source\repos\CarProject\Car\obj\Debug\net6.0\CarModel.AssemblyInfoInputs.cache
+C:\Users\Murat\source\repos\CarProject\Car\obj\Debug\net6.0\CarModel.AssemblyInfo.cs
+C:\Users\Murat\source\repos\CarProject\Car\obj\Debug\net6.0\CarModel.csproj.CoreCompileInputs.cache
+C:\Users\Murat\source\repos\CarProject\Car\obj\Debug\net6.0\CarModel.dll
+C:\Users\Murat\source\repos\CarProject\Car\obj\Debug\net6.0\refint\CarModel.dll
+C:\Users\Murat\source\repos\CarProject\Car\obj\Debug\net6.0\CarModel.pdb
+C:\Users\Murat\source\repos\CarProject\Car\obj\Debug\net6.0\ref\CarModel.dll

@@ -1,0 +1,15 @@
+C:\Users\Murat\source\repos\CarProject\CarProjectConsole\obj\Debug\net6.0\CarProjectConsole.csproj.AssemblyReference.cache
+C:\Users\Murat\source\repos\CarProject\CarProjectConsole\obj\Debug\net6.0\CarProjectConsole.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Murat\source\repos\CarProject\CarProjectConsole\obj\Debug\net6.0\CarProjectConsole.AssemblyInfoInputs.cache
+C:\Users\Murat\source\repos\CarProject\CarProjectConsole\obj\Debug\net6.0\CarProjectConsole.AssemblyInfo.cs
+C:\Users\Murat\source\repos\CarProject\CarProjectConsole\obj\Debug\net6.0\CarProjectConsole.csproj.CoreCompileInputs.cache
+C:\Users\Murat\source\repos\CarProject\CarProjectConsole\bin\Debug\net6.0\CarProjectConsole.exe
+C:\Users\Murat\source\repos\CarProject\CarProjectConsole\bin\Debug\net6.0\CarProjectConsole.deps.json
+C:\Users\Murat\source\repos\CarProject\CarProjectConsole\bin\Debug\net6.0\CarProjectConsole.runtimeconfig.json
+C:\Users\Murat\source\repos\CarProject\CarProjectConsole\bin\Debug\net6.0\CarProjectConsole.dll
+C:\Users\Murat\source\repos\CarProject\CarProjectConsole\bin\Debug\net6.0\CarProjectConsole.pdb
+C:\Users\Murat\source\repos\CarProject\CarProjectConsole\obj\Debug\net6.0\CarProjectConsole.dll
+C:\Users\Murat\source\repos\CarProject\CarProjectConsole\obj\Debug\net6.0\refint\CarProjectConsole.dll
+C:\Users\Murat\source\repos\CarProject\CarProjectConsole\obj\Debug\net6.0\CarProjectConsole.pdb
+C:\Users\Murat\source\repos\CarProject\CarProjectConsole\obj\Debug\net6.0\CarProjectConsole.genruntimeconfig.cache
+C:\Users\Murat\source\repos\CarProject\CarProjectConsole\obj\Debug\net6.0\ref\CarProjectConsole.dll
