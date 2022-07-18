@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CarModel.Car
+﻿namespace CarModel.Car
 {
     public enum CarType { Clasic, Sedan, HatchBag, SUV, Roader, Sport }
     public enum CarColor { White, Black, Red, Yellow, Gray, Blue, Pink, Purple, Brown, Green, Orange }
@@ -17,7 +11,7 @@ namespace CarModel.Car
         public FuelType FuelType { get; set; }
         public int Capacity { get; set; }
         public double Price { get; set; }
-        public DateTime ModelYear { get; set; }
+        public int ModelYear { get; set; }
 
     }
 }

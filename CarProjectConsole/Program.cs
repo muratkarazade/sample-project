@@ -1,24 +1,23 @@
-﻿using System.Text.Json;
+﻿using CarModel.Car.CarDB;
+using System.Text.Json;
 
 namespace CarProjectConsole
 {
     class Program
     {
-        public static void Main()
+       
+        public  static void Main()
         {
 
+            JsonOperations jsonOp = new JsonOperations();
+            jsonOp.WriteJsonAsync();
+            jsonOp.ReadJsonAsync();
+           
 
+           
 
         }
 
-        public object? allCarList;
-
-        public  void JsonFileWrite()
-        {
-            var url = @"C:\Users\Murat\Desktop\CarList.txt";
-            string jsonString = JsonSerializer.Serialize(allCarList);
-            File.WriteAllText(url, jsonString);
-        }
 
     }
 }

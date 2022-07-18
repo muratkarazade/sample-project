@@ -9,13 +9,18 @@ namespace CarModel.Car.CarTypes
 {
     internal class SedanCar : ICar, ISedan
     {
-        public string? Name { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public CarType Type { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public CarColor Color { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public FuelType FuelType { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int Capacity { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public double Price { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public DateTime ModelYear { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string Tire { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string? Name { get; set; }
+        public CarType Type { get; set; }
+        public CarColor Color { get; set; }
+        public FuelType FuelType { get; set; }
+        public int Capacity { get; set; }
+        public double Price { get; set; }
+        public int ModelYear { get; set; }
+        public string Tire { get; set; }
+
+        public SedanCar()
+        {
+            this.Type = CarType.Sedan;
+        }
     }
 }
