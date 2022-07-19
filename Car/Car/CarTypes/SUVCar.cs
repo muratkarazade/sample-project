@@ -9,6 +9,7 @@ namespace CarModel.Car.CarTypes
 {
     public class SUVCar : ICar, ISUV
     {
+        public int Id { get; set; }
         public string? Name { get; set; }
         public CarType Type { get; set; }
         public CarColor Color { get; set; }

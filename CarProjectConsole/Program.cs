@@ -9,9 +9,9 @@ namespace CarProjectConsole
         public  static void Main()
         {
 
-            JsonOperations jsonOp = new JsonOperations();
-            jsonOp.WriteJsonAsync();
-            jsonOp.ReadJsonAsync();
+            //JsonOperations jsonOp = new JsonOperations();
+            //jsonOp.WriteJsonAsync();
+            //jsonOp.ReadJsonAsync();
            
 
            

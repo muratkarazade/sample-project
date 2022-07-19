@@ -13,10 +13,16 @@ namespace CarModel.Car.CarDB
 {
     public class JsonOperations
     {
-       public async Task  WriteJsonAsync()
+       public async Task  WriteJsonAsync(List<AllSkillCar> list)
         {
-            await File.WriteAllTextAsync($"{AppDomain.CurrentDomain.BaseDirectory}\\CarList.json", JsonConvert.SerializeObject(CarDB.list), new UTF8Encoding(false));
+            await File.WriteAllTextAsync($"{AppDomain.CurrentDomain.BaseDirectory}\\CarList.json", JsonConvert.SerializeObject(list), new UTF8Encoding(false));
         }
+
+        //public async Task WriteJsonAsync(List<AllSkillCar> list)
+        //{
+        //    await File.WriteAllTextAsync($"{AppDomain.CurrentDomain.BaseDirectory}\\CarList.json", JsonConvert.SerializeObject(list), new UTF8Encoding(false));
+        //}
+
         public async Task<List<AllSkillCar>> ReadJsonAsync()
         {
             var json = await File.ReadAllTextAsync($"{AppDomain.CurrentDomain.BaseDirectory}\\CarList.json", new UTF8Encoding(false));

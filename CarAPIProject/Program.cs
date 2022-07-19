@@ -15,8 +15,10 @@ builder.Services.AddSwaggerGen();
 var app = builder.Build();
 
 JsonOperations jsonOp = new JsonOperations();
-await jsonOp.WriteJsonAsync();
+await jsonOp.WriteJsonAsync(CarDB.list);
 Cache.CarList= await jsonOp.ReadJsonAsync();
+
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

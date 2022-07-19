@@ -9,6 +9,7 @@ namespace CarModel.Car.CarTypes
 {
     internal class SportCar : ICar, ISport
     {
+        public int Id { get; set; }
         public string? Name { get; set; }
         public CarType Type { get; set; }
         public CarColor Color { get; set; }

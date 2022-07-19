@@ -5,6 +5,7 @@
     public enum FuelType { Gas, Diesel, Electric, Hybrid }
     public interface ICar
     {
+        public int Id { get; set; }
         public string? Name { get; set; }
         public CarType Type { get; set; }
         public CarColor Color { get; set; }

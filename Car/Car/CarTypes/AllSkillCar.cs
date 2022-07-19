@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace CarModel.Car.CarTypes
 {
-    public class AllSkillCar : ICar,IClasic,IHatchBag,IRoad,ISedan,ISport,ISUV
+    public class AllSkillCar : ICar, IClasic, IHatchBag, IRoad, ISedan, ISport, ISUV
     {
+        public int Id { get; set; }
         public string? Name { get; set; }
         public CarType Type { get; set; }
         public CarColor Color { get; set; }
@@ -22,5 +23,6 @@ namespace CarModel.Car.CarTypes
         public string Tire { get; set; }
         public string TurboName { get; set; }
         public int Headlamps { get; set; }
+
     }
 }

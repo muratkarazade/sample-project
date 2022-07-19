@@ -4,7 +4,7 @@ namespace CarModel.Car.CarTypes
 {
     public class ClasicCar : ICar, IClasic
     {
-       
+        public int Id { get; set; }
         public string? Name { get; set; }
         public CarType Type { get; set; }
         public CarColor Color { get; set; }
@@ -13,8 +13,7 @@ namespace CarModel.Car.CarTypes
         public double Price { get; set; }
         public int ModelYear { get; set; }
         public bool Antique { get; set; }
-
-
+        
 
         public ClasicCar()
         {
