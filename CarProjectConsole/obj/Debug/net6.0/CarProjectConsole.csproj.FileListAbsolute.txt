@@ -28,3 +28,5 @@ C:\Users\Murat\source\repos\CarProject\CarProjectConsole\obj\Debug\net6.0\CarPro
 C:\Users\Murat\source\repos\CarProject\CarProjectConsole\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\Murat\source\repos\CarProject\CarProjectConsole\bin\Debug\net6.0\CarModel.dll
 C:\Users\Murat\source\repos\CarProject\CarProjectConsole\bin\Debug\net6.0\CarModel.pdb
+C:\Users\Murat\source\repos\CarProject\CarProjectConsole\bin\Debug\net6.0\System.Net.Http.Formatting.dll
+C:\Users\Murat\source\repos\CarProject\CarProjectConsole\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll

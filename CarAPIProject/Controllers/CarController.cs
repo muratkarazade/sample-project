@@ -72,12 +72,25 @@ namespace CarAPIProject.Controllers
             return ok;
 
         }
-        //[HttpDelete]
-        //[Route("[action]")]
-        //public async Task<AllSkillCar> RemoveCarAsync(int id)
-        //{
-
-        //}
+        [HttpDelete]
+        [Route("[action]")]
+        public async Task<bool> RemoveCarAsync(int id)
+        {
+            
+            var ok = false;
+            var car = Cache.CarList.FirstOrDefault(x => x.Id == id);
+            if (car == null)  throw new Exception("Not found" );
+            Cache.CarList.Remove(car);
+            ok = true;
+            return ok;
+        }
+        [HttpDelete] 
+        [Route("[action]")]
+        public async Task<bool> RemoveAllCarAsync()
+        {
+            Cache.CarList.Clear();
+            return true;
+        }
 
 
 
