@@ -1,15 +1,17 @@
 using CarAPIProject;
 using CarModel.Car.CarDB;
 using CarModel.Car.CarTypes;
+using Newtonsoft.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddNewtonsoftJson(setup => { setup.SerializerSettings.NullValueHandling = NullValueHandling.Ignore; setup.UseMemberCasing(); });
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
+                
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();

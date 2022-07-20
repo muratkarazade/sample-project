@@ -1,15 +1,12 @@
 ﻿using CarModel.Car.CarSkills;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace CarModel.Car.CarTypes
 {
     public class AllSkillCar : ICar, IClasic, IHatchBag, IRoad, ISedan, ISport, ISUV
     {
         public int Id { get; set; }
+        [JsonProperty("n")]
         public string? Name { get; set; }
         public CarType Type { get; set; }
         public CarColor Color { get; set; }
@@ -20,8 +17,8 @@ namespace CarModel.Car.CarTypes
         public bool Antique { get; set; }
         public bool Sunroof { get; set; }
         public int Machine { get; set; }
-        public string Tire { get; set; }
-        public string TurboName { get; set; }
+        public string? Tire { get; set; }
+        public string? TurboName { get; set; }
         public int Headlamps { get; set; }
 
     }

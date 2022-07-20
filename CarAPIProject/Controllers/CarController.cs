@@ -9,48 +9,58 @@ namespace CarAPIProject.Controllers
     [ApiController]
     public class CarController : ControllerBase
     {
+
+        #region GetCarAsync method
         [HttpGet]
         [Route("[action]")]
         public async Task<List<AllSkillCar>> GetCarAsync()
         {
             return Cache.CarList.ToList();
-             
-        }
 
+        }
+        #endregion
+        #region GetCarByCapacityAsync Method
         [HttpGet]
         [Route("[action]")]
         public async Task<AllSkillCar> GetCarByCapacityAsync(int capacity)
         {
-            var item =  Cache.CarList.Select(x=>x.Capacity >= 4).FirstOrDefault();
+            var item = Cache.CarList.Select(x => x.Capacity >= 4).FirstOrDefault();
             if (item == null) return null;
             return Cache.CarList.FirstOrDefault();
         }
+        #endregion
+        #region GetByCarModelYearAsync Method
 
         [HttpGet]
         [Route("[action]")]
         public async Task<List<AllSkillCar?>> GetByCarModelYearAsync(int modelYear)
         {
-          
-            return  Cache.CarList.Where(x=>x.ModelYear==modelYear).ToList();
-            
+
+            return Cache.CarList.Where(x => x.ModelYear == modelYear).ToList();
+
         }
+        #endregion
+        #region GetByCarPriceAsync Method
         [HttpGet]
         [Route("[action]")]
         public async Task<AllSkillCar> GetByCarPriceAsync(double Price)
         {
-            List<double> priceList =  Cache.CarList.Select(x=>x.Price).ToList();
+            List<double> priceList = Cache.CarList.Select(x => x.Price).ToList();
             return Cache.CarList.FirstOrDefault();
-           
-        }
 
+        }
+        #endregion
+        #region AddCarAsync (Post Method)
         [HttpPost]
         [Route("[action]")]
-        public async  Task<List<AllSkillCar>> AddCarAsync(AllSkillCar allSkillCar)
+        public async Task<object> AddCarAsync(AllSkillCar allSkillCar)
         {
-           Cache.CarList.Add(allSkillCar);
-           return Cache.CarList;
+
+            return Cache.CarList;
 
         }
+        #endregion
+        #region EditCarAsync (Put Method)
         [HttpPut]
         [Route("[action]")]
         public async Task<bool> EditCarAsync([FromBody] AllSkillCar car)
@@ -72,25 +82,39 @@ namespace CarAPIProject.Controllers
             return ok;
 
         }
+        #endregion
+        #region RemoveCarAsync Method
         [HttpDelete]
         [Route("[action]")]
         public async Task<bool> RemoveCarAsync(int id)
         {
-            
+
             var ok = false;
             var car = Cache.CarList.FirstOrDefault(x => x.Id == id);
-            if (car == null)  throw new Exception("Not found" );
+            if (car == null) throw new Exception("Not found");
             Cache.CarList.Remove(car);
             ok = true;
             return ok;
         }
-        [HttpDelete] 
+        #endregion
+        #region RemoveAllCarAsync Method
+
+
+        [HttpDelete]
         [Route("[action]")]
         public async Task<bool> RemoveAllCarAsync()
         {
             Cache.CarList.Clear();
             return true;
         }
+
+        #endregion
+
+
+
+
+
+
 
 
 
