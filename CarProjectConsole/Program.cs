@@ -13,12 +13,14 @@ namespace CarProjectConsole
 
         public async static Task Main()
         {
-           // await CarListAsync();
+            //await CarListAsync();
             //await CapacityAsync();
             //await ModelYearAsync();
             //await PriceAsync();
+            //await AddCarAsync();
+            //await Test2Async(1);
+            await Test3Async(1, 4);
 
-            await AddCarAsync();
             Console.ReadLine();
         }
         static async Task CarListAsync()
@@ -113,9 +115,15 @@ namespace CarProjectConsole
                     client.BaseAddress = new Uri("https://localhost:7242/api/Car/");
                     var c = new AllSkillCar() { Id = 62, ModelYear = 2001, Capacity = 4, Color = CarModel.Car.CarColor.White,  Name = "Ford" };
                    // client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                    var response = await client.PostAsJsonAsync("addcar", c);
-                    var str = await response.Content.ReadAsStringAsync();
-                    var list = await response.Content.ReadAsAsync<object>();
+                    var response = await client.PostAsJsonAsync("addcar", c);                   
+                    if (response.IsSuccessStatusCode)
+                    {
+                    var list = await response.Content.ReadAsAsync<bool>();
+                    }
+                    else {
+                        var str = await response.Content.ReadAsStringAsync();
+                        response.EnsureSuccessStatusCode(); 
+                    }
 
                 }
 
@@ -126,6 +134,52 @@ namespace CarProjectConsole
             }
         }
 
+        static async Task Test2Async(int id)
+        {
+            try
+            {
+                using (var client = new HttpClient())
+                {
+                    client.BaseAddress = new Uri("https://localhost:7242/api/Car/");
+                    var updateCar = new AllSkillCar() { Id = id, ModelYear = 2022, Name="Bentley" , Type=CarModel.Car.CarType.Clasic, Antique=true, Color=CarModel.Car.CarColor.White,Price=1111};
+                    var response = await client.PostAsJsonAsync("test2", updateCar);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var list = await response.Content.ReadAsAsync<object>();
+                    }
+                    else
+                    {
+                        var str = await response.Content.ReadAsStringAsync();
+                        response.EnsureSuccessStatusCode();
+                    }
+                }
+            }
+            catch (Exception)
+            {
 
+                throw;
+            }
+           
+        }
+
+         static async Task Test3Async(int id , int capacity)
+        {
+            try
+            {
+                using (var client = new HttpClient())
+                { 
+                   
+                    client.BaseAddress = new Uri("https://localhost:7242/api/Car/test3");
+                    var newCar = new AllSkillCar() { Id = id, ModelYear = 2022, Name = "Airbus", Capacity=capacity, Type = CarModel.Car.CarType.Clasic, Antique = true, Color = CarModel.Car.CarColor.White, Price = 1111 };
+                    var response = await client.PostAsJsonAsync("", newCar);
+                    if (response.IsSuccessStatusCode) { var list = await response.Content.ReadAsAsync<object>(); } else { var str = await response.Content.ReadAsStringAsync(); }
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

@@ -12,6 +12,7 @@ namespace CarAPIProject.Controllers
 
         #region GetCarAsync method
         [HttpGet]
+
         [Route("[action]")]
         public async Task<List<AllSkillCar>> GetCarAsync()
         {
@@ -29,21 +30,21 @@ namespace CarAPIProject.Controllers
             return Cache.CarList.FirstOrDefault();
         }
         #endregion
-        #region GetByCarModelYearAsync Method
+        #region GetCarByModelYearAsync Method
 
         [HttpGet]
         [Route("[action]")]
-        public async Task<List<AllSkillCar?>> GetByCarModelYearAsync(int modelYear)
+        public async Task<List<AllSkillCar?>> GetCarByModelYearAsync(int modelYear)
         {
 
             return Cache.CarList.Where(x => x.ModelYear == modelYear).ToList();
 
         }
         #endregion
-        #region GetByCarPriceAsync Method
+        #region GetCarByPriceAsync Method
         [HttpGet]
         [Route("[action]")]
-        public async Task<AllSkillCar> GetByCarPriceAsync(double Price)
+        public async Task<AllSkillCar> GetCarByPriceAsync(double Price)
         {
             List<double> priceList = Cache.CarList.Select(x => x.Price).ToList();
             return Cache.CarList.FirstOrDefault();
@@ -110,8 +111,50 @@ namespace CarAPIProject.Controllers
 
         #endregion
 
+        //Practies API Methods
 
+        #region Test1Async
+        [HttpPost]
+        [Route("[action]")]
+        public async Task Test1Async()
+        {
+            var car = Cache.CarList.FirstOrDefault();
+            if (car == null) throw new Exception("not found");
+            Cache.CarList.Add(car);
+        }
+        #endregion
+        #region Test2Async
 
+        [HttpPost]
+        [Route("[action]")]
+        public async Task Test2Async(AllSkillCar allSkillCar)
+        {
+
+            var car = Cache.CarList.Where(x => x.Id == allSkillCar.Id).FirstOrDefault(x => x.Id == allSkillCar.Id);
+            if (car == null) throw new Exception("not found");
+            Cache.CarList.Add(allSkillCar);
+        }
+
+        #endregion
+
+        #region Test3Async
+        [HttpPost]
+        [Route("[action]")]
+        public async Task Test3Async(AllSkillCar allSkillCar)
+        {
+            var car = Cache.CarList.Where(x => x.Id == allSkillCar.Id && x.Capacity == allSkillCar.Capacity).FirstOrDefault();
+            if (car == null) throw new Exception("Incorrect operation");
+            Cache.CarList.Add(car);
+
+        }
+        #endregion
+
+        [HttpPost]
+        [Route("[action]")]
+        public async Task<List<AllSkillCar>> Test4Async()
+        {
+            var car = Cache.CarList()
+        }
 
 
 
